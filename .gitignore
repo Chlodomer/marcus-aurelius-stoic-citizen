@@ -1,0 +1,9 @@
+.DS_Store
+.superpowers/
+tmp/
+output/
+node_modules/
+*.log
+Transcript.md
+source-ocr.txt
+docs/superpowers/
