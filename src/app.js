@@ -37,8 +37,8 @@
     }
   }
 
-  function visualField(theme) {
-    return `<aside class="visual-panel visual--${escapeHtml(theme)}" aria-hidden="true"></aside>`;
+  function visualField(theme, asset) {
+    return `<aside class="visual-panel visual--${escapeHtml(theme)}" style="--portrait-image:url('${escapeHtml(asset)}')" aria-hidden="true"></aside>`;
   }
 
   function footer() {
@@ -83,7 +83,7 @@
             </div>
             <p class="privacy-note">No account is needed. Progress is saved automatically on this device; no student data is sent from the app.</p>
           </div>
-          ${visualField('title')}
+          ${visualField('title', 'assets/marcus-aurelius-abstract-modern.png')}
         </section>
         ${footer()}
       </div>`;
@@ -215,7 +215,7 @@
       <div class="app-shell">
         ${topbar()}
         <section class="question-layout">
-          ${visualField(question.art)}
+          ${visualField(question.art, question.artAsset)}
           <article class="question-panel">
             <div class="question-kicker"><span>Question ${question.number} of 8</span><span>${escapeHtml(question.theme)}</span></div>
             <h1>${escapeHtml(question.title)}</h1>

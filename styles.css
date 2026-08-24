@@ -190,7 +190,7 @@ h1, h2, h3 { text-wrap: balance; }
 .visual-panel::before {
   z-index: -2;
   inset: -2%;
-  background: url("assets/marcus-aurelius-abstract-modern.png") var(--portrait-position, 50% 50%) / cover no-repeat;
+  background: var(--portrait-image, url("assets/marcus-aurelius-abstract-modern.png")) var(--portrait-position, 50% 50%) / cover no-repeat;
   filter: saturate(.9) contrast(1.04);
 }
 .visual-panel::after {
@@ -202,15 +202,15 @@ h1, h2, h3 { text-wrap: balance; }
     repeating-linear-gradient(90deg, transparent 0 39px, rgba(197,204,255,.045) 39px 40px);
 }
 
-.visual--title { --portrait-position: 52% 48%; --panel-wash: rgba(124,140,255,.08); }
-.visual--discipline { --portrait-position: 56% 42%; --panel-wash: rgba(104,214,189,.1); --wash-angle: 210deg; }
-.visual--fellowship { --portrait-position: 48% 44%; --panel-wash: rgba(255,109,106,.1); --wash-angle: 70deg; }
-.visual--cities { --portrait-position: 55% 50%; --panel-wash: rgba(124,140,255,.12); --wash-angle: 155deg; }
-.visual--council { --portrait-position: 50% 43%; --panel-wash: rgba(104,214,189,.1); --wash-angle: 235deg; }
-.visual--purple { --portrait-position: 56% 47%; --panel-wash: rgba(255,109,106,.12); --wash-angle: 305deg; }
-.visual--frontier { --portrait-position: 47% 44%; --panel-wash: rgba(124,140,255,.1); --wash-angle: 100deg; }
-.visual--family { --portrait-position: 54% 50%; --panel-wash: rgba(104,214,189,.09); --wash-angle: 175deg; }
-.visual--succession { --portrait-position: 49% 42%; --panel-wash: rgba(255,109,106,.1); --wash-angle: 260deg; }
+.visual--title { --portrait-position: 52% 48%; --mobile-position: 54% 38%; --panel-wash: rgba(124,140,255,.08); }
+.visual--discipline { --portrait-position: 56% 42%; --mobile-position: 50% 34%; --panel-wash: rgba(104,214,189,.1); --wash-angle: 210deg; }
+.visual--fellowship { --portrait-position: 48% 44%; --mobile-position: 50% 35%; --panel-wash: rgba(255,109,106,.1); --wash-angle: 70deg; }
+.visual--cities { --portrait-position: 55% 50%; --mobile-position: 50% 42%; --panel-wash: rgba(124,140,255,.12); --wash-angle: 155deg; }
+.visual--council { --portrait-position: 50% 43%; --mobile-position: 50% 42%; --panel-wash: rgba(104,214,189,.1); --wash-angle: 235deg; }
+.visual--purple { --portrait-position: 56% 47%; --mobile-position: 48% 38%; --panel-wash: rgba(255,109,106,.12); --wash-angle: 305deg; }
+.visual--frontier { --portrait-position: 47% 44%; --mobile-position: 50% 40%; --panel-wash: rgba(124,140,255,.1); --wash-angle: 100deg; }
+.visual--family { --portrait-position: 54% 50%; --mobile-position: 50% 47%; --panel-wash: rgba(104,214,189,.09); --wash-angle: 175deg; }
+.visual--succession { --portrait-position: 49% 42%; --mobile-position: 50% 40%; --panel-wash: rgba(255,109,106,.1); --wash-angle: 260deg; }
 
 .onboarding-shell { max-width: 1120px; min-height: 100vh; margin: 0 auto; padding: clamp(40px, 8vw, 100px) clamp(20px, 6vw, 72px); }
 .onboarding-steps { display: flex; gap: 8px; margin-bottom: 52px; }
@@ -350,7 +350,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--gold); outline: 
   .brand-small { max-width: 190px; }
   .question-layout { display: flex; min-height: auto; flex-direction: column; }
   .question-layout .visual-panel { min-height: 220px; max-height: 30vh; }
-  .visual-panel::before { background-position: 54% 38%; }
+  .visual-panel::before { background-position: var(--mobile-position, 50% 38%); }
   .question-panel { min-height: calc(66vh - 64px); padding: 30px 20px 44px; }
   .question-panel h1 { font-size: 39px; }
   .question-context { font-size: 17px; }

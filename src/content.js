@@ -93,7 +93,7 @@
 
   const questions = [
     {
-      id: 'q1', number: 1, theme: 'Virtue', title: 'The Stoic Standard', art: 'discipline',
+      id: 'q1', number: 1, theme: 'Virtue', title: 'The Stoic Standard', art: 'discipline', artAsset: 'assets/q1-stoic-standard.png',
       context: 'Marcus repeatedly turns philosophy into a test of conduct. Begin by deciding which demand gives his standard its centre.',
       anchor: ['iii-6'], minimumWords: 40, evidenceRequirement: 0,
       choices: [
@@ -108,7 +108,7 @@
       }
     },
     {
-      id: 'q2', number: 2, theme: 'Social obligation', title: 'Made for One Another', art: 'fellowship',
+      id: 'q2', number: 2, theme: 'Social obligation', title: 'Made for One Another', art: 'fellowship', artAsset: 'assets/q2-cooperation.png',
       context: 'Marcus describes difficult people as kin and compares human beings to parts of one body. What kind of obligation follows?',
       anchor: ['ii-1'], minimumWords: 65, evidenceRequirement: 1,
       choices: [
@@ -123,7 +123,7 @@
       }
     },
     {
-      id: 'q3', number: 3, theme: 'Citizenship', title: 'Two Cities', art: 'cities',
+      id: 'q3', number: 3, theme: 'Citizenship', title: 'Two Cities', art: 'cities', artAsset: 'assets/q3-two-cities.png',
       context: 'Marcus calls Rome his city as Antoninus and the world his city as a man. The relation between those memberships is not self-explanatory.',
       anchor: ['vi-44'], minimumWords: 75, evidenceRequirement: 1,
       choices: [
@@ -138,7 +138,7 @@
       }
     },
     {
-      id: 'q4', number: 4, theme: 'Legitimate rule', title: 'The Model Princeps', art: 'council',
+      id: 'q4', number: 4, theme: 'Legitimate rule', title: 'The Model Princeps', art: 'council', artAsset: 'assets/q4-legitimate-rule.png',
       context: 'In Book I, Marcus remembers Antoninus Pius through habits of rule rather than victories or monuments.',
       anchor: ['i-16'], minimumWords: 95, evidenceRequirement: 2,
       choices: [
@@ -153,7 +153,7 @@
       }
     },
     {
-      id: 'q5', number: 5, theme: 'Imperial self-command', title: 'Do Not Become “Caesarified”', art: 'purple',
+      id: 'q5', number: 5, theme: 'Imperial self-command', title: 'Do Not Become “Caesarified”', art: 'purple', artAsset: 'assets/q5-caesarified.png',
       context: 'The metaphor of taking a dye imagines imperial office as something that can alter the person who wears it.',
       anchor: ['vi-30'], minimumWords: 85, evidenceRequirement: 1,
       choices: [
@@ -168,7 +168,7 @@
       }
     },
     {
-      id: 'q6', number: 6, theme: 'Campaign and conquest', title: 'The Frontier Paradox', art: 'frontier',
+      id: 'q6', number: 6, theme: 'Campaign and conquest', title: 'The Frontier Paradox', art: 'frontier', artAsset: 'assets/q6-frontier-paradox.png',
       context: 'Marcus wrote while campaigning on the northern frontier. In X.10 he places the capture of Sarmatians in a sequence of hunts and asks whether the victors are brigands.',
       anchor: ['x-10', 'ii-carnuntum'], minimumWords: 105, evidenceRequirement: 1,
       choices: [
@@ -183,7 +183,7 @@
       }
     },
     {
-      id: 'q7', number: 7, theme: 'Family and detachment', title: '“Let My Children Be Safe”', art: 'family',
+      id: 'q7', number: 7, theme: 'Family and detachment', title: '“Let My Children Be Safe”', art: 'family', artAsset: 'assets/q7-family-detachment.png',
       context: 'Marcus treats the wish for his children’s safety as a sign that the mind is demanding only an easy portion of reality. Haines connects the line to anxiety about Commodus.',
       anchor: ['x-35', 'i-17'], minimumWords: 90, evidenceRequirement: 1,
       choices: [
@@ -198,7 +198,7 @@
       }
     },
     {
-      id: 'q8', number: 8, theme: 'Succession and evidence', title: 'The Commodus Problem', art: 'succession',
+      id: 'q8', number: 8, theme: 'Succession and evidence', title: 'The Commodus Problem', art: 'succession', artAsset: 'assets/q8-succession.png',
       context: 'Securely attested: Commodus was Marcus’s biological son, was made Caesar in 166, became co-emperor in 177, and succeeded Marcus in 180. The Meditations never gives a direct explanation of Marcus’s succession decision. Later judgments about Commodus do not by themselves reveal Marcus’s motive.',
       inferenceLabel: 'Historical context distinguishes succession facts from interpretations of motive.',
       anchor: ['i-17', 'x-35'], minimumWords: 180, evidenceRequirement: 2,

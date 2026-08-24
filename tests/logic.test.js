@@ -1,5 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const content = require('../src/content.js');
 const logic = require('../src/logic.js');
@@ -9,6 +11,15 @@ test('the assignment contains eight braided questions with three branches each',
   for (const question of content.questions) {
     assert.equal(question.choices.length, 3);
     assert.equal(Object.keys(question.branches).length, 3);
+  }
+});
+
+test('each question has its own available illustration asset', () => {
+  const assets = content.questions.map((question) => question.artAsset);
+  assert.equal(new Set(assets).size, 8);
+  for (const asset of assets) {
+    assert.match(asset, /^assets\/q[1-8]-[a-z-]+\.png$/);
+    assert.ok(fs.existsSync(path.join(__dirname, '..', asset)), `${asset} must exist`);
   }
 });
 
