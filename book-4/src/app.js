@@ -179,7 +179,7 @@
         <p class="eyebrow">Your source challenge · ${escapeHtml(selectedChoice ? selectedChoice.label : '')}</p>
         <p>${escapeHtml(branch ? branch.prompt : '')}</p>
       </div>
-      <p class="question-instruction">Open the Source Library to select wording from Book IV for your response. Write approximately one paragraph, using the passage to explain your interpretation.</p>
+      <p class="question-instruction">Open the Source Library to select passages from Book IV that support your response. Write approximately one paragraph, using the passages you choose to explain your interpretation.</p>
       <div class="field">
         <label for="response">Your response</label>
         <textarea id="response" data-question="${question.id}" placeholder="Make a claim, use exact evidence, and explain your reasoning.">${escapeHtml(answer.response)}</textarea>
@@ -197,7 +197,7 @@
           <button class="button button--primary" type="button" data-action="save-question">${question.number === 8 ? 'Save and review' : 'Save and continue'}</button>
         </div>
       </div>` : `
-      <p class="question-instruction">Each question offers an excerpt from the <em>Meditations</em> and three ways to read the themes it emphasizes. There is no single right choice. Choose the interpretation you can support, then explain it using the text.</p>
+      <p class="question-instruction">Each question offers an excerpt from the <em>Meditations</em> and three ways to read the themes it emphasizes. There is no single right choice. Choose one of the interpretations below that you feel best represents the core ideas of the text. Be prepared to support your choice using relevant passages from Book IV, which you can access in the Source Library.</p>
       <fieldset class="choice-list">
         <legend class="sr-only">Choose an interpretation</legend>
         ${question.choices.map((choice) => `

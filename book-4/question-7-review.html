@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Question 7 Review · Meditations Book IV</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .review-question { max-width: 960px; margin: auto; }
+      .review-question h2 { margin: 32px 0 16px; }
+      .review-question h3 { margin: 0 0 12px; }
+      .review-illustration { width: 100%; max-height: 340px; object-fit: cover; margin: 12px 0 28px; }
+      .review-path { padding: 20px 0; border-bottom: 1px solid rgba(220,227,243,.18); }
+      .review-source { padding: 18px 0; }
+      .review-source p { white-space: pre-line; line-height: 1.65; }
+    </style>
+  </head>
+  <body>
+    <main class="app-shell review-question">
+      <article class="question-panel" id="review-content"></article>
+    </main>
+    <script src="src/content.js"></script>
+    <script>
+      (function () {
+        const content = window.MarcusContent;
+        const question = content.questions.find((item) => item.id === 'q7');
+        const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[character]));
+        const passages = question.anchor.map((id) => content.passages.find((item) => item.id === id));
+        document.getElementById('review-content').innerHTML = `
+          <p class="eyebrow">Book IV · Question 7 review</p>
+          <h1>${escapeHtml(question.title)}</h1>
+          <p class="question-instruction">This review shows the question, all three choices and their writing prompts, and the complete source sections supplied for this question. You can read it without starting or completing the assignment.</p>
+          <a class="button button--ghost" href="./">Open the assignment</a>
+          <img class="review-illustration" src="${escapeHtml(question.artAsset)}" alt="">
+          <p class="question-context">${escapeHtml(question.context)}</p>
+          <div class="anchor-block"><blockquote>“${escapeHtml(question.anchorExcerpt)}”</blockquote><div class="anchor-cite">IV.3 · Haines translation</div><div class="anchor-more">Additional sources: IV.27 and IV.45.</div></div>
+          <h2>Choices and writing prompts</h2>
+          <p class="question-instruction">Each question offers an excerpt from the <em>Meditations</em> and three ways to read the themes it emphasizes. There is no single right choice. Choose one of the interpretations below that you feel best represents the core ideas of the text. Be prepared to support your choice using relevant passages from Book IV, which you can access in the Source Library.</p>
+          ${question.choices.map((choice) => `<section class="review-path"><h3>${escapeHtml(choice.label)}</h3><p>${escapeHtml(choice.description)}</p><div class="branch-prompt"><p class="eyebrow">Your source challenge</p><p>${escapeHtml(question.branches[choice.id].prompt)}</p></div></section>`).join('')}
+          <p class="question-instruction">Open the Source Library to select passages from Book IV that support your response. Write approximately one paragraph, using the passages you choose to explain your interpretation.</p>
+          <p class="field-hint">Question 7 requires at least ${question.minimumWords} words and quotations from ${question.evidenceRequirement} distinct source sections.</p>
+          <h2>Complete source sections</h2>
+          ${passages.map((passage) => `<section class="review-source"><h3>${escapeHtml(passage.citation)} · ${escapeHtml(passage.title)}</h3><p>${escapeHtml(passage.text)}</p></section>`).join('')}
+        `;
+      }());
+    </script>
+  </body>
+</html>
