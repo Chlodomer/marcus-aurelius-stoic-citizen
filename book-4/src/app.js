@@ -151,7 +151,7 @@
 
   function anchorMarkup(question) {
     const passage = content.passages.find((item) => item.id === question.anchor[0]);
-    const excerpt = passage.text.length > 520 ? `${passage.text.slice(0, 517).replace(/\s+\S*$/, '')}…` : passage.text;
+    const excerpt = question.anchorExcerpt || (passage.text.length > 520 ? `${passage.text.slice(0, 517).replace(/\s+\S*$/, '')}…` : passage.text);
     return `
       <div class="anchor-block">
         <blockquote>“${escapeHtml(excerpt)}”</blockquote>
@@ -179,6 +179,7 @@
         <p class="eyebrow">Your source challenge · ${escapeHtml(selectedChoice ? selectedChoice.label : '')}</p>
         <p>${escapeHtml(branch ? branch.prompt : '')}</p>
       </div>
+      <p class="question-instruction">Open the Source Library to select wording from Book IV for your response. Write approximately one paragraph, using the passage to explain your interpretation.</p>
       <div class="field">
         <label for="response">Your response</label>
         <textarea id="response" data-question="${question.id}" placeholder="Make a claim, use exact evidence, and explain your reasoning.">${escapeHtml(answer.response)}</textarea>
@@ -196,6 +197,7 @@
           <button class="button button--primary" type="button" data-action="save-question">${question.number === 8 ? 'Save and review' : 'Save and continue'}</button>
         </div>
       </div>` : `
+      <p class="question-instruction">Each question offers an excerpt from the <em>Meditations</em> and three ways to read the themes it emphasizes. There is no single right choice. Choose the interpretation you can support, then explain it using the text.</p>
       <fieldset class="choice-list">
         <legend class="sr-only">Choose an interpretation</legend>
         ${question.choices.map((choice) => `

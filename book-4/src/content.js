@@ -429,7 +429,9 @@
     {
       id: 'q7', number: 7, theme: 'Providence and order', title: 'Providence or Atoms', art: 'order', artAsset: 'assets/book4-q7-providence-atoms.png',
       context: 'Marcus invokes the alternative “Either Providence or Atoms,” but elsewhere argues that even apparent disorder remains connected within a whole.',
-      anchor: ['iv-3', 'iv-27', 'iv-45'], minimumWords: 115, evidenceRequirement: 2,
+      anchor: ['iv-3', 'iv-27', 'iv-45'],
+      anchorExcerpt: 'But art thou discontented with thy share in the whole? Recall the alternative: Either Providence or Atoms! and the abundant proofs there are that the Universe is as it were a state.',
+      minimumWords: 115, evidenceRequirement: 2,
       choices: [
         { id: 'providence', label: 'Providence grounds the argument', description: 'A rationally ordered Whole makes acceptance intelligible.' },
         { id: 'order', label: 'Connection matters more than certainty', description: 'Marcus needs an ordered relationship among events, not a solved theology.' },
